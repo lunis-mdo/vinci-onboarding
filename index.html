@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Maquettes Onboarding VINCI Energies</title>
+<style>
+  :root {
+    --etic: #005360;
+    --etic-dark: #00343D;
+    --etic-green: #9CC98C;
+    --ink: #1A2333;
+    --text: #4A5361;
+    --border: #E6EAF0;
+    --bg: #FFFFFF;
+    --soft: #F6F8FB;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: "Segoe UI", Segoe, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    padding: 20px 32px;
+    font-size: 14px; color: var(--etic); font-weight: 600;
+  }
+  .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--etic-green); box-shadow: 0 0 0 4px rgba(156, 201, 140, .25); }
+  main { flex: 1; width: 100%; max-width: 1120px; margin: 0 auto; padding: 48px 16px 64px; }
+  .hero { text-align: center; max-width: 720px; margin: 0 auto; }
+  .pill {
+    display: inline-block; font-size: 13px; font-weight: 600; color: var(--etic);
+    background: rgba(0, 83, 96, .07); border-radius: 999px; padding: 6px 14px;
+  }
+  h1 {
+    color: var(--ink); font-weight: 700; letter-spacing: -0.02em;
+    font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin-top: 18px;
+  }
+  .hero p { font-size: 18px; line-height: 1.6; margin-top: 16px; }
+  .grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 24px; margin-top: 56px; }
+  @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    display: flex; flex-direction: column; text-decoration: none; color: inherit;
+    border: 1px solid var(--border); border-radius: 20px; overflow: hidden; background: #fff;
+    transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(16, 24, 40, .10); border-color: #D5DCE5; }
+  .card:focus-visible { outline: 3px solid var(--etic-green); outline-offset: 4px; }
+  .preview {
+    background: var(--soft); height: 300px; overflow: hidden; position: relative;
+    display: flex; align-items: flex-start; justify-content: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .preview.web img {
+    width: 120%; height: auto; max-width: none; margin-top: 28px; margin-left: 20%;
+    border-radius: 10px 0 0 0; box-shadow: 0 8px 30px rgba(16, 24, 40, .12);
+    transition: transform .4s ease;
+  }
+  .preview.mobile img { width: 220px; height: auto; margin-top: 28px; filter: drop-shadow(0 12px 24px rgba(16, 24, 40, .16)); transition: transform .4s ease; }
+  .card:hover .preview img { transform: translateY(-6px); }
+  .body { padding: 22px 24px 24px; display: flex; align-items: center; gap: 16px; }
+  .body h2 { color: var(--ink); font-size: 20px; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+  .body p { font-size: 15px; margin-top: 4px; }
+  .tag { font-size: 12px; font-weight: 600; color: #8A6520; background: #FBF0DC; border-radius: 999px; padding: 3px 10px; }
+  .arrow {
+    margin-left: auto; flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50%;
+    background: var(--etic); color: #fff; display: flex; align-items: center; justify-content: center;
+    transition: background .25s ease;
+  }
+  .card:hover .arrow { background: var(--etic-dark); }
+  footer {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 20px 32px 28px; font-size: 13px; color: #6B7280;
+  }
+  footer a {
+    background: var(--etic-green); color: var(--etic-dark); font-weight: 600;
+    border-radius: 999px; padding: 8px 14px; text-decoration: none;
+  }
+  footer a:hover { text-decoration: underline; }
+  @media (prefers-reduced-motion: reduce) {
+    .card, .card:hover, .preview img, .card:hover .preview img { transition: none; transform: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="brand"><span class="dot" aria-hidden="true"></span>ETIC INSA Technologies</div>
+
+  <main>
+    <div class="hero">
+      <span class="pill">VINCI Energies · Building Solutions</span>
+      <h1>L'onboarding des nouveaux arrivants, en un coup d'œil</h1>
+      <p>Découvrez les maquettes interactives de l'application.</p>
+    </div>
+
+    <div class="grid">
+      <a class="card" href="web.html">
+        <div class="preview web"><img src="assets/apercu-web.jpg" alt="Aperçu du tableau de bord de la version web" width="1400" height="788"></div>
+        <div class="body">
+          <div>
+            <h2>Version web</h2>
+            <p>Les 5 vues : Pôle, RRH, Chef d'entreprise, Manager, Collaborateur</p>
+          </div>
+          <span class="arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card" href="mobile.html">
+        <div class="preview mobile"><img src="assets/apercu-mobile.png" alt="Aperçu de la vue Collaborateur sur smartphone" width="354" height="760"></div>
+        <div class="body">
+          <div>
+            <h2>Version mobile <span class="tag">Option</span></h2>
+            <p>La vue Collaborateur sur smartphone</p>
+          </div>
+          <span class="arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <span>Maquettes indicatives, données fictives.</span>
+    <a href="https://www.etic-insa.com/" target="_blank" rel="noopener noreferrer">À titre indicatif - Propriété ETIC INSA Technologies</a>
+  </footer>
+</body>
+</html>
