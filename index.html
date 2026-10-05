@@ -61,9 +61,12 @@
     display: flex; align-items: flex-start; justify-content: center;
     border-bottom: 1px solid var(--border);
   }
+  .preview.web { align-items: flex-end; }
   .preview.web img {
-    width: 120%; height: auto; max-width: none; margin-top: clamp(16px, 3vh, 28px); margin-left: 20%;
-    border-radius: 10px 0 0 0; box-shadow: 0 8px 30px rgba(16, 24, 40, .12);
+    width: 90%; height: calc(100% - clamp(16px, 3vh, 28px)); max-width: none;
+    object-fit: cover; object-position: top left;
+    border: 1px solid var(--border); border-bottom: 0; border-radius: 10px 10px 0 0;
+    box-shadow: 0 8px 30px rgba(16, 24, 40, .12);
     transition: transform .4s ease;
   }
   .preview.mobile img { width: clamp(150px, 26vh, 230px); height: auto; margin-top: clamp(16px, 3vh, 28px); filter: drop-shadow(0 12px 24px rgba(16, 24, 40, .16)); transition: transform .4s ease; }
